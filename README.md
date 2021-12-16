@@ -22,9 +22,10 @@ git add . && git commit -m "from home" && git push -u origin master
                 - cat /etc/passwd
                 - JENKINS-41339 probably bogus PATH
                 - 생활코딩 user, 권한, 그룹 관련 다시 보기        
-                        
+
 
 
 전달 
     - 여러 개 cdk로 할 경우 stack 간 충돌 발생
     - git트리거용 리포와 파이프라인용 리포 분리 필요, 방법 있는지 확인해야
+    - ec2-user의 PATH 환경변수를 jenkins에 그대로 전달
