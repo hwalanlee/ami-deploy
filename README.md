@@ -22,6 +22,7 @@ git add . && git commit -m "from home" && git push -u origin master
                 - cat /etc/passwd
                 - JENKINS-41339 probably bogus PATH
                 - 생활코딩 user, 권한, 그룹 관련 다시 보기
+                
 
 
 전달 
