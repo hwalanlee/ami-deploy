@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/home/ec2-user/.nvm/versions/node/v17.2.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.nvm/versions/node/v17.2.0/lib/node_modules"
+        PATH = "/home/ec2-user/.nvm/versions/node/v17.2.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.nvm/versions/node/v17.2.0/bin/npm"
     }    
 
 
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Building with Packer........'
                 sh "printenv"
-                sh 'sh jenkins-pipeline/packer.sh'
+                // sh 'sh jenkins-pipeline/packer.sh'
             }
         }
         stage('Deploy second asg') {
@@ -24,6 +24,7 @@ pipeline {
         stage('Switch asg') {
             steps {
                 echo 'Switching asg..'
+                sh 'sh jenkins-pipeline/asg-switch.sh'
             }
         }
     }
