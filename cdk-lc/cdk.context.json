@@ -1,0 +1,71 @@
+{
+  "vpc-provider:account=367072688873:filter.isDefault=false:filter.tag:Name=CdkInfraStack/lan-cicd-vpc:region=ap-northeast-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-050220a213ff4736b",
+    "vpcCidrBlock": "172.20.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "lan-cicd-public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0157e420e21c772c9",
+            "cidr": "172.20.0.0/24",
+            "availabilityZone": "ap-northeast-2a",
+            "routeTableId": "rtb-0fa5be29d7083ac6d"
+          },
+          {
+            "subnetId": "subnet-041006c339504dab9",
+            "cidr": "172.20.1.0/24",
+            "availabilityZone": "ap-northeast-2c",
+            "routeTableId": "rtb-0facd5c416f3853f5"
+          }
+        ]
+      }
+    ]
+  },
+  "ami:account=367072688873:filters.image-type.0=machine:filters.name.0=lan-cicd-ami-systemctl:filters.state.0=available:region=ap-northeast-2": "ami-0034a8ba96e2a6918",
+  "load-balancer:account=367072688873:loadBalancerTags.0.key=name:loadBalancerTags.0.value=lan-cicd-alb:loadBalancerType=application:region=ap-northeast-2": {
+    "loadBalancerArn": "arn:aws:elasticloadbalancing:ap-northeast-2:367072688873:loadbalancer/app/lan-cicd-alb/dd90e8ee0c69c59d",
+    "loadBalancerCanonicalHostedZoneId": "ZWKZPGTI48KDX",
+    "loadBalancerDnsName": "lan-cicd-alb-695481885.ap-northeast-2.elb.amazonaws.com",
+    "vpcId": "vpc-050220a213ff4736b",
+    "securityGroupIds": [
+      "sg-07026a726916ab54c"
+    ],
+    "ipAddressType": "ipv4"
+  },
+  "security-group:account=367072688873:region=ap-northeast-2:securityGroupName=lan-cicd-asg-sg:vpcId=vpc-050220a213ff4736b": {
+    "securityGroupId": "sg-0402c2a247b54e5be",
+    "allowAllOutbound": false
+  },
+  "vpc-provider:account=367072688873:filter.vpc-id=vpc-050220a213ff4736b:region=ap-northeast-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-050220a213ff4736b",
+    "vpcCidrBlock": "172.20.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "lan-cicd-public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0157e420e21c772c9",
+            "cidr": "172.20.0.0/24",
+            "availabilityZone": "ap-northeast-2a",
+            "routeTableId": "rtb-0fa5be29d7083ac6d"
+          },
+          {
+            "subnetId": "subnet-041006c339504dab9",
+            "cidr": "172.20.1.0/24",
+            "availabilityZone": "ap-northeast-2c",
+            "routeTableId": "rtb-0facd5c416f3853f5"
+          }
+        ]
+      }
+    ]
+  },
+  "security-group:account=367072688873:region=ap-northeast-2:securityGroupId=sg-07026a726916ab54c": {
+    "securityGroupId": "sg-07026a726916ab54c",
+    "allowAllOutbound": false
+  }
+}

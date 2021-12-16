@@ -1,0 +1,31 @@
+{
+    "variables": {
+        "access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "{{user `access_key`}}",
+            "secret_key": "{{user `secret_key`}}",
+            "region": "ap-northeast-2",
+            "ami_name": "lan-cicd-ami-systemctl-test",
+            "source_ami": "ami-003ef1c0e2776ea27",
+            "force_deregister": "true",
+            "force_delete_snapshot": "true",
+            "instance_type": "t2.micro",
+            "ssh_username": "ec2-user"            
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "/var/lib/jenkins/workspace/pipeline-test/packer-systemctl/atbooting.sh",
+            "destination": "/home/ec2-user/"
+        },
+        {
+            "type": "shell",
+            "script": "/var/lib/jenkins/workspace/pipeline-test/packer-systemctl/setup.sh"
+        }
+    ]
+}

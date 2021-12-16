@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    environment {
+        PATH = "/home/ec2-user/.nvm/versions/node/v17.2.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
+    } 
+
+    stages {
+        stage('Build with Packer') {
+            steps {
+                echo 'Building with Packer........'
+                sh "printenv"
+                sh 'sh jenkins-pipeline/packer.sh'
+            }
+        }
+        stage('Deploy second asg') {
+            steps {
+                echo 'Deploying second asg..'
+                sh 'sh jenkins-pipeline/cdk-infra.sh'
+            }
+        }
+        stage('Switch asg') {
+            steps {
+                echo 'Switching asg..'
+            }
+        }
+    }
+}

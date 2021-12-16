@@ -1,0 +1,7 @@
+asg-switch/node_modules/
+cdk-infra/node_modules/
+cdk-lc/node_modules/
+simple-nodejs/node_modules/
+
+.env
+*.log
