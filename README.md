@@ -29,3 +29,6 @@ git add . && git commit -m "from home" && git push -u origin master
     - git트리거용 리포와 파이프라인용 리포 분리 필요, 방법 있는지 확인해야
     - ec2-user의 PATH 환경변수를 jenkins에 그대로 전달
     - jenkins에 모든 권한 할당? jenkins 서버니까 그래도 되지 않음?
+        - /etc/sudoers 에 추가
+            - Jenkins ALL=(ALL) ALL
+            - Defaults:jenkins !authenticate
