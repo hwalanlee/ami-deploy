@@ -20,6 +20,7 @@ git add . && git commit -m "from home" && git push -u origin master
         - 해결해야 할 일
             - jenkins 파이프라인
                 - 리턴 코드 확인 방법, 진행 여부 결정
+    - 마무리 후 jenkins-node ami 다시 만들어주기
     - 표준화, 변수화
 
 
