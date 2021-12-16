@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/home/ec2-user/.nvm/versions/node/v17.2.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
-    }
-    
+        PATH = "/home/ec2-user/.nvm/versions/node/v17.2.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.nvm/versions/node/v17.2.0/lib/node_modules"
+    }    
+
+
 
     stages {
         stage('Build with Packer') {

@@ -18,10 +18,8 @@ git add . && git commit -m "from home" && git push -u origin master
         - sh 파일 만들 때, npm install 후에 실행
         - 나중에 웹훅 다시 해결
         - 해결해야 할 일
-            - jenkins command not found
-                - cat /etc/passwd
-                - JENKINS-41339 probably bogus PATH
-                - 생활코딩 user, 권한, 그룹 관련 다시 보기        
+            - jenkins 파이프라인
+                - 리턴 코드 확인 방법, 진행 여부 결정
 
 
 
