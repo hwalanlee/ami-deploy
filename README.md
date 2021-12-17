@@ -15,13 +15,29 @@ git add . && git commit -m "from home" && git push -u origin master
             - targetGroupName: 'lan-alb-second-tg',   // tag 텝에서 Name으로 적용됐는지 확인해야 !!!!
     - 젠킨스 파이프라인
         - 순서: (수동) packer > cdk-infra > simple-nodejs push || (자동) packer > cdk-lc > asg-switch
-        - sh 파일 만들 때, npm install 후에 실행
-        - 나중에 웹훅 다시 해결
-        - 해결해야 할 일
-            - jenkins 파이프라인
-                - 리턴 코드 확인 방법, 진행 여부 결정
-    - 마무리 후 jenkins-node ami 다시 만들어주기
+    - jenkins-node ami 새로 만들기
+        - /etc/sudoers 에서 권한 추가한 후
+        - jenkins 로그인 - sudo su -s /bin/bash [username]        
+        - sudo yum -y update
+        - aws configure
+        - git
+            - sudo yum install git
+        - node
+            - sudo yum -y update
+            - curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+            (- sudo yum clean all && sudo yum makecache fast)
+            (- sudo yum install -y gcc-c++ make)
+            - sudo yum install -y nodejs
+        - cdk
+            - npm install -g aws-cdk
+        - packer
+            - sudo yum install -y yum-utils
+            - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+            - sudo yum -y install packer
+    - 파이프라인 테스트 해보기
     - 표준화, 변수화
+    - 과제
+        - 웹훅용, scm용 별도 적용
 
 
 
