@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy second asg') {
             steps {
                 echo 'Deploying second asg..'
-                sh 'sh jenkins-pipeline/cdk-infra.sh'
+                sh 'sh jenkins-pipeline/cdk-lc.sh'
             }
         }
         stage('Switch asg') {
