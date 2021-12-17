@@ -33,3 +33,4 @@ git add . && git commit -m "from home" && git push -u origin master
         - /etc/sudoers 에 추가
             - Jenkins ALL=(ALL) ALL
             - Defaults:jenkins !authenticate
+        >>> 해결! sudo su -s /bin/bash [username]
