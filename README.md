@@ -19,7 +19,7 @@ git add . && git commit -m "from home" && git push -u origin master
         - /etc/sudoers 에서 권한 추가한 후
         - jenkins 로그인 - sudo su -s /bin/bash [username]         
         - sudo yum -y update
-        - aws configure
+        - aws configure 
         - git
             - sudo yum install git
         - node
