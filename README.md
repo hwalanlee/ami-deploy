@@ -17,7 +17,7 @@ git add . && git commit -m "from home" && git push -u origin master
         - 순서: (수동) packer > cdk-infra > simple-nodejs push || (자동) packer > cdk-lc > asg-switch
     - jenkins-node ami 새로 만들기
         - /etc/sudoers 에서 권한 추가한 후
-        - jenkins 로그인 - sudo su -s /bin/bash [username]         
+        - jenkins 로그인 - sudo su -s /bin/bash [username]
         - sudo yum -y update
         - aws configure 
         - git
