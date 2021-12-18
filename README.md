@@ -17,10 +17,10 @@ git add . && git commit -m "from home" && git push -u origin master
         - 순서: (수동) packer > cdk-infra > simple-nodejs push || (자동) packer > cdk-lc > asg-switch
     - jenkins-node ami 새로 만들기
         - /etc/sudoers 에서 권한 추가한 후
-        - jenkins 로그인 - sudo su -s /bin/bash [username] 
+        - sudo su -s /bin/bash jenkins >>> jenkins 로그인
         - sudo yum -y update
         - aws configure 
-        - git
+        - git (연동은 job 생성 시 입력)
             - sudo yum install git
         - node
             - sudo yum -y update
@@ -34,14 +34,12 @@ git add . && git commit -m "from home" && git push -u origin master
             - sudo yum install -y yum-utils
             - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
             - sudo yum -y install packer
-    - 파이프라인 테스트 해보기
-    - 표준화, 변수화
-    - 과제
-        - 웹훅용, scm용 별도 적용
+    - 서버용 리포 어떻게 할지 결정
+    - 표준화, 변수화        
 
 
 
-전달 
+남은 과제
     - 여러 개 cdk로 할 경우 stack 간 충돌 발생
     - git트리거용 리포와 파이프라인용 리포 분리 필요, 방법 있는지 확인해야
     - ec2-user의 PATH 환경변수를 jenkins에 그대로 전달
