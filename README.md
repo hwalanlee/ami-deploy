@@ -15,7 +15,7 @@ git add . && git commit -m "from home" && git push -u origin master
             - targetGroupName: 'lan-alb-second-tg',   // tag 텝에서 Name으로 적용됐는지 확인해야 !!!!
     - 젠킨스 파이프라인
         - 순서: (수동) packer > cdk-infra > simple-nodejs push || (자동) packer > cdk-lc > asg-switch
-    - jenkins-node ami 새로 만들기
+    - jenkins-node ami 새로 만들기 > lan-jenkins-new
         - /etc/sudoers 에서 권한 추가한 후
         - sudo su -s /bin/bash jenkins >>> jenkins 로그인
         - sudo yum -y update
@@ -34,8 +34,9 @@ git add . && git commit -m "from home" && git push -u origin master
             - sudo yum install -y yum-utils
             - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
             - sudo yum -y install packer
-    - 서버용 리포 어떻게 할지 결정
+    - CodeDeploy
     - 표준화, 변수화        
+        - example.json > "ami_name": "lan-cicd-ami-systemctl"
 
 
 
