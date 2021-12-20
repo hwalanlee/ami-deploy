@@ -1,7 +1,7 @@
 git init && git add . && git commit -m "first commit" && git branch -M master && git remote add origin https://github.com/hwalanlee/ami-deploy.git && git push -u origin master
 git add . && git commit -m "from company" && git push -u origin master
  
- 
+  
 남은 할 일 
     - 전부 git remote remove origin
     - 전체 프로젝트 레포 만들기
