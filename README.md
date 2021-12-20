@@ -49,3 +49,6 @@ git add . && git commit -m "from company" && git push -u origin master
             - Jenkins ALL=(ALL) ALL
             - Defaults:jenkins !authenticate
         >>> 해결! sudo su -s /bin/bash [username]
+
+
+
