@@ -9,20 +9,20 @@ pipeline {
         stage('Build with Packer') {
             steps {
                 echo 'Building with Packer........'
-                sh "printenv"
+                // sh "printenv"
                 // sh 'sh jenkins-pipeline/packer.sh'
             }
         }
         stage('Deploy second asg') {
             steps {
                 echo 'Deploying second asg..'
-                sh 'sh jenkins-pipeline/cdk-lc.sh'
+                // sh 'sh jenkins-pipeline/cdk-lc.sh'
             }
         }
         stage('Switch asg') {
             steps {
                 echo 'Switching asg..'
-                sh 'sh jenkins-pipeline/asg-switch.sh'
+                // sh 'sh jenkins-pipeline/asg-switch.sh'
             }
         }
     }
