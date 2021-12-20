@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building with Packer........'
                 // sh "printenv"
-                // sh 'sh jenkins-pipeline/packer.sh'
+                sh 'sh jenkins-pipeline/packer.sh'
             }
         }
         stage('Deploy second asg') {
