@@ -2,7 +2,7 @@ git init && git add . && git commit -m "first commit" && git branch -M master &&
 git add . && git commit -m "from company" && git push -u origin master
 
  
-남은 할 일
+남은 할 일 
     - 전부 git remote remove origin
     - 전체 프로젝트 레포 만들기
     - 개별 폴더가 동작하는지 확인
